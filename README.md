@@ -1,66 +1,83 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+🧾 Sistema de Gestión Administrativa – Versión Demo
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Demo de un sistema de gestión administrativa desarrollado con Laravel y Node.js, enfocado en el ingreso de datos y la generación automática de contratos y pagarés en PDF.
+Esta versión demo no contiene datos reales ni identidad visual del sistema productivo; está diseñada para demostrar funcionalidades clave y la estructura del proyecto.
 
-## About Laravel
+🎯 Propósito
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este proyecto es una versión simplificada y pública de un sistema desarrollado para fines administrativos y financieros. El objetivo principal de la demo es mostrar:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Formularios de ingreso de datos
+- Validaciones de usuario
+- Generación automática de documentos PDF (contratos y pagarés)
+- Arquitectura modular del sistema
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+🛠️ Tecnologías Usadas
+Área	                Tecnologías
+Backend	              Laravel (PHP)
+Frontend	            HTML, CSS, JavaScript
+PDF	                  jsPDF u otra librería de generación de PDF
+Base de Datos	        MySQL (demo)
+Control de Versiones	Git / GitHub
 
-## Learning Laravel
+🚀 ¿Qué Incluye la Demo?
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 📝 Formularios de ingreso de datos para contratos
+- 🧾 Generación de documentos PDF (contratos y pagarés)
+- 📂 Estructura de carpetas organizada por módulo
+- 🧪 Código base listo para ampliar o adaptar
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+🧱 Estructura del Proyecto
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+├── app/                 # Lógica principal del sistema
+├── bootstrap/           # Configuración del framework Laravel
+├── config/              # Configuraciones del proyecto
+├── database/            # Migraciones / Seeds (demo)
+├── public/              # Archivos públicos
+├── resources/           # Vistas y assets front-end
+├── routes/              # Definición de rutas
+├── storage/             # Archivos generados
+├── tests/               # Pruebas (si existen)
+├── README.md            # Este archivo
+├── composer.json        # Dependencias PHP
+└── package.json         # Dependencias JS
 
-## Laravel Sponsors
+📥 Instalación (entorno local)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Asegúrate de tener PHP, Composer, MySQL y Node.js instalados.
 
-### Premium Partners
+1. Clona el repositorio: git clone https://github.com/KareliaAntunez/sistema-gestion-administrativa-demo.git
+2. Instala dependencias de Laravel: composer install
+3. Instala dependencias de JavaScript: npm install
+4. Copia el archivo de configuración: cp .env.example .env
+5. Crea una base de datos local y configura .env:
+  DB_HOST=127.0.0.1
+  DB_DATABASE=demo_db
+  DB_USERNAME=root
+  DB_PASSWORD=
+6. Genera la clave de aplicación: php artisan key:generate
+7. Ejecuta migraciones (si aplica): php artisan migrate
+8. Inicia el servidor: php artisan serve
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+🧾 Uso de la Demo
 
-## Contributing
+1. Abre tu navegador en http://localhost:8000
+2. Usa los formularios para ingresar datos
+3. Genera contratos o pagarés en PDF
+4. Revisa los PDF en la carpeta /storage o según diseño
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Nota: Esta demo no incluye sistemas de usuario real ni autenticación avanzada.
 
-## Code of Conduct
+📌 Notas Importantes
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Esta es una versión de demostración pública y NO contiene datos sensibles
+- No es el sistema real original
+- Está pensada para fines de aprendizaje, portafolio y evaluación técnica
 
-## Security Vulnerabilities
+👩‍💻 Sobre la Autora
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Karelia Cecilia Antúnez Rivas
+Junior Software Developer | QA Automation | Informática Administrativa
+📧 antunezkarelia@gmail.com
+🔗 https://www.linkedin.com/in/karelia-cecilia-antunez-rivas-66443b183
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
